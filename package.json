@@ -22,6 +22,7 @@
   "homepage": "https://github.com/dnghtien/dnghtienServer#readme",
   "dependencies": {
     "express": "^4.17.1",
+    "mongoose": "^5.9.5",
     "nodemon": "^2.0.2"
   }
 }
