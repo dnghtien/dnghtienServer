@@ -21,6 +21,6 @@ app.get('/', (req, res, next) => {
 mongoose
     .connect('mongodb+srv://dnghtien:zzdr10389@cluster0-jlgxs.mongodb.net/test?retryWrites=true&w=majority', {useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {
-        app.listen( process.env.PORT, console.log('Server is running'));
+        app.listen( process.env.PORT||3000, console.log('Server is running'));
     })
     .catch(err => console.log(err));
