@@ -1,13 +1,23 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const app = express();
-
+const cors = require('cors');
+const logger = require('morgan');
 
 const APIRoutes = require('./routes/api_route');
 
 app.use(express.urlencoded({
     extended: false
 }));
+
+app.use(
+    cors({
+        origin:'https://floating-tundra-58387.herokuapp.com/',
+        credentials:'true',
+    })
+)
+
+app.use(logger('dev'));
 
 app.use(express.json());
 
