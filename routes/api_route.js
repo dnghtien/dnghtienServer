@@ -1,15 +1,15 @@
 const express = require('express');
 const router = express.Router();
-const postcontroller = require('../controller/post_controller');
+const accountcontroller = require('../controller/account_controller');
 
-router.post('/add-post', postcontroller.addPost);
+router.post('/add-account', accountcontroller.addAccount);
 
-router.get('/posts', postcontroller.showPost);
+router.get('/show-account', accountcontroller.showAccount);
 
-router.get('/post/:id', postcontroller.singlePost);
+router.get('/account/:id', accountcontroller.singleAccount);
 
-router.patch('/post-update', postcontroller.updatePost);
+router.patch('/account-update', accountcontroller.updateAccount);
 
-router.delete('/remove-post/:id', postcontroller.deletePost);
+router.delete('/remove-account/:id', accountcontroller.deleteAccount);
 
 module.exports = router;
