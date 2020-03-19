@@ -9,6 +9,22 @@ const accountSchema = new Schema({
     password: {
         type: String,
         required: true
+    },
+    email: {
+        type: String,
+        required: true
+    },
+    select: {
+        type: Number,
+        required: true
+    },
+    mltselect: {
+        type: Number,
+        required: false
+    },
+    area: {
+        type: String,
+        required: true
     }
 });
 
