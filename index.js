@@ -11,10 +11,7 @@ app.use(express.urlencoded({
 }));
 
 app.use(
-    cors({
-        origin:'https://floating-tundra-58387.herokuapp.com/',
-        credentials:'true',
-    }),
+    cors(),
 )
 
 app.use(logger('dev'));
