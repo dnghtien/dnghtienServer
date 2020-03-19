@@ -15,16 +15,20 @@ const accountSchema = new Schema({
         required: true
     },
     select: {
-        type: Number,
+        type: String,
         required: true
     },
     mltselect: {
-        type: Number,
-        required: false
+        type: String,
+        required: true
     },
     area: {
         type: String,
         required: true
+    },
+    date: {
+        type: Date,
+        default: Date.now()
     }
 });
 

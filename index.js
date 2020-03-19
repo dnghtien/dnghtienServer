@@ -14,7 +14,7 @@ app.use(
     cors({
         origin:'https://floating-tundra-58387.herokuapp.com/',
         credentials:'true',
-    })
+    }),
 )
 
 app.use(logger('dev'));
@@ -22,6 +22,10 @@ app.use(logger('dev'));
 app.use(express.json());
 
 app.use('/', APIRoutes);
+
+app.use((req,res)=>{
+    res.send('Server is running')
+})
 
 mongoose
     .connect('mongodb+srv://dnghtien:zzdr10389@cluster0-jlgxs.mongodb.net/test?retryWrites=true&w=majority', {useNewUrlParser: true, useUnifiedTopology: true })

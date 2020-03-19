@@ -3,7 +3,11 @@ const Account = require('../model/account_model');
 exports.addAccount = (req, res, next) => {
   const account = new Account({
     user: req.body.user,
-    password: req.body.password
+    password: req.body.password,
+    email: req.body.email,
+    select: req.body.select,
+    mltselect: req.body.mltselect,
+    area: req.body.area
   });
   account
     .save()
