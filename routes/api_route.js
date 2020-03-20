@@ -12,4 +12,6 @@ router.patch('/account-update', accountcontroller.updateAccount);
 
 router.delete('/remove-account/:id', accountcontroller.deleteAccount);
 
+router.get('/exits-account', accountcontroller.exitsAccount);
+
 module.exports = router;

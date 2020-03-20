@@ -52,3 +52,11 @@ exports.deleteAccount = (req, res, next) => {
       res.send('Account deleted');
     }).catch(err => res.status(400).send(err));
 };
+
+exports.exitsAccount = (req, res, next) => {
+  Account.find({user:req.body.user, password:req.body.password})
+    .then(result => {
+      res.send(result);
+    })
+    .catch(err=>res.status(400).send(err));
+}
